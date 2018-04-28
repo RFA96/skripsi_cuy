@@ -9,7 +9,6 @@
     </head>
     <body>
         <?php include "left_panel.php"?>
-        <!-- Right Panel -->
         <div id="right-panel" class="right-panel">
             <?php include "header_tag.php"?>
             <div class="breadcrumbs">
@@ -33,14 +32,14 @@
 
 
             <div class="content mt-3">
-                <div class="col-sm-12">
-                    <div class="alert  alert-success alert-dismissible fade show" role="alert">
-                        <span class="badge badge-pill badge-success">Success</span> You successfully read this important alert message.
-                        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                            <span aria-hidden="true">&times;</span>
-                        </button>
-                    </div>
-                </div>
+<!--                <div class="col-sm-12">-->
+<!--                    <div class="alert  alert-success alert-dismissible fade show" role="alert">-->
+<!--                        <span class="badge badge-pill badge-success">Success</span> You successfully read this important alert message.-->
+<!--                        <button type="button" class="close" data-dismiss="alert" aria-label="Close">-->
+<!--                            <span aria-hidden="true">&times;</span>-->
+<!--                        </button>-->
+<!--                    </div>-->
+<!--                </div>-->
 
 
                 <div class="col-sm-6 col-lg-4">
@@ -143,39 +142,37 @@
                         <p class="text-light">Wind Speed</p>
 
                         <div class="chart-wrapper px-0" style="height:70px;" height="70">
-                        <canvas id="widgetChart4"></canvas>
-                    </div>
-
-                </div>
-            </div>
-        </div>
-        <!--/.col-->
-
-        <div class="col-sm-6 col-lg-4">
-            <div class="card text-white bg-flat-color-5">
-                <div class="card-body pb-0">
-                    <div class="dropdown float-right">
-                        <button class="btn bg-transparent dropdown-toggle theme-toggle text-light" type="button" id="dropdownMenuButton" data-toggle="dropdown">
-                            <i class="fa fa-arrows-alt"></i>
-                        </button>
-                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                            <div class="dropdown-menu-content">
-                                <a class="dropdown-item" href="index.html#">See graphics...</a>
-                                <a class="dropdown-item" href="index.html#">See data...</a>
-                            </div>
+                            <canvas id="widgetChart4"></canvas>
                         </div>
                     </div>
-                    <h4 class="mb-0">
-                        <span class="count">10468</span>
-                    </h4>
-                    <p class="text-light">Wind Vane</p>
-
                 </div>
-
-                <div class="chart-wrapper px-0" style="height:70px;" height="70">
             </div>
-        </div>
-        </div>
+        <!--/.col-->
+
+            <div class="col-sm-6 col-lg-4">
+                <div class="card text-white bg-flat-color-5">
+                    <div class="card-body pb-0">
+                        <div class="dropdown float-right">
+                            <button class="btn bg-transparent dropdown-toggle theme-toggle text-light" type="button" id="dropdownMenuButton" data-toggle="dropdown">
+                                <i class="fa fa-arrows-alt"></i>
+                            </button>
+                            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                <div class="dropdown-menu-content">
+                                    <a class="dropdown-item" href="index.html#">See graphics...</a>
+                                    <a class="dropdown-item" href="index.html#">See data...</a>
+                                </div>
+                            </div>
+                        </div>
+                        <h4 class="mb-0">
+                            <span class="count">10468</span>
+                        </h4>
+                        <p class="text-light">Wind Vane</p>
+                    </div>
+                    <div class="chart-wrapper px-0" style="height:70px;" height="70">
+
+                    </div>
+                </div>
+            </div>
         <!--/.col-->
                 <div class="col-sm-6 col-lg-4">
                     <div class="card text-white bg-flat-color-1">
@@ -203,7 +200,6 @@
                         </div>
                     </div>
                 </div>
-                <!--/.col-->
             </div>
         </div>
 
