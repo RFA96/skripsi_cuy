@@ -1,4 +1,4 @@
-<?php include "db_connection.php"?>
+<?php include "db_connection.php"; include "coba_decode_xml_current.php"?>
 <!doctype html>
     <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang=""> <![endif]-->
     <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8" lang=""> <![endif]-->
@@ -200,6 +200,41 @@
                         </div>
                     </div>
                 </div>
+
+                <div class="col-md-12">
+                    <aside class="profile-nav alt">
+                        <section class="card">
+                            <div class="card-header user-header alt bg-dark">
+                                <div class="media">
+                                    <a href="ui-cards.html#">
+                                        <img class="align-self-center rounded-circle mr-3" style="width:85px; height:85px;" alt="" src="http://www.clker.com/cliparts/a/9/f/c/12284285012032586819sivvus_weather_symbols_2.svg.hi.png">
+                                    </a>
+                                    <div class="media-body">
+                                        <h2 class="text-light display-6">Current Weather</h2>
+                                        <p>Lowokwaru, ID</p>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                            <ul class="list-group list-group-flush">
+                                <li class="list-group-item">
+                                    <a href="ui-cards.html#"> <i class="fa fa-envelope-o"></i> Temperature <span class="badge badge-primary pull-right"><?php echo $getTemperature;?> &#8451;</span></a>
+                                </li>
+                                <li class="list-group-item">
+                                    <a href="ui-cards.html#"> <i class="fa fa-tasks"></i> Humidity <span class="badge badge-danger pull-right"><?php echo $getHumidity."%";?></span></a>
+                                </li>
+                                <li class="list-group-item">
+                                    <a href="ui-cards.html#"> <i class="fa fa-bell-o"></i> Cloud <span class="badge badge-success pull-right"><?php echo ucwords($getCloud);?></span></a>
+                                </li>
+                                <li class="list-group-item">
+                                    <a href="ui-cards.html#"> <i class="fa fa-comments-o"></i> Precipitation <span class="badge badge-warning pull-right r-activity"><?php echo $getPrecipitation;?></span></a>
+                                </li>
+                            </ul>
+
+                        </section>
+                    </aside>
+                </div>
             </div>
         </div>
 
@@ -216,7 +251,7 @@
                     // labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July'],
                     labels: [
                         <?php
-                            $query = mysqli_query($conn, "SELECT tanggal, waktu FROM suhu_kelembapan");
+                            $query = mysqli_query($conn, "SELECT tanggal, waktu FROM (SELECT * FROM suhu_kelembapan ORDER BY record_id DESC LIMIT 7) sub ORDER BY record_id ASC;");
                             while($row = mysqli_fetch_array($query, MYSQLI_BOTH))
                             {
                                 $tanggal = $row['tanggal'];
@@ -229,14 +264,16 @@
                     datasets: [ {
                         // data: [65, 59, 84, 84, 51, 55, 40],
                         data: [<?php
-                                    $query = mysqli_query($conn, "SELECT temperature FROM suhu_kelembapan");
+                                    $query = mysqli_query($conn, "SELECT * FROM (SELECT * FROM suhu_kelembapan ORDER BY record_id DESC LIMIT 7) sub ORDER BY record_id ASC;");
                                     while($row = mysqli_fetch_array($query, MYSQLI_BOTH))
                                     {
                                         $temperature = $row['temperature'];
                                         echo "'$temperature',";
+//                                        echo $temperature.',';
                                     }
                                 ?>],
                         label: 'Temperature',
+                        // backgroundColor: '#63c2de',
                         backgroundColor: 'transparent',
                         borderColor: 'rgba(255,255,255,.55)',
                     }, ]
@@ -282,6 +319,97 @@
                     },
                     elements: {
                         line: {
+                            tension: 0.00001,
+                            borderWidth: 1
+                        },
+                        point: {
+                            radius: 4,
+                            hitRadius: 10,
+                            hoverRadius: 4
+                        }
+                    }
+                }
+            } );
+
+
+            //WidgetChart 2
+            var ctx = document.getElementById( "widgetChart2" );
+            ctx.height = 150;
+            var myChart = new Chart( ctx, {
+                type: 'line',
+                data: {
+                    // labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July'],
+                    labels: [
+                        <?php
+                        $query = mysqli_query($conn, "SELECT tanggal, waktu FROM (SELECT * FROM suhu_kelembapan ORDER BY record_id DESC LIMIT 7) sub ORDER BY record_id ASC;");
+                        while($row = mysqli_fetch_array($query, MYSQLI_BOTH))
+                        {
+                            $tanggal = $row['tanggal'];
+                            $waktu = $row['waktu'];
+                            echo "'$tanggal | $waktu',";
+                        }
+                        ?>
+                    ],
+                    type: 'line',
+                    datasets: [ {
+                        // data: [1, 18, 9, 17, 34, 22, 11],
+                        data: [
+                            <?php
+                            $query = mysqli_query($conn, "SELECT * FROM (SELECT * FROM suhu_kelembapan ORDER BY record_id DESC LIMIT 7) sub ORDER BY record_id ASC;");
+                            while($row = mysqli_fetch_array($query, MYSQLI_BOTH))
+                            {
+                                $humidity = $row['humidity'];
+                                echo "'$humidity',";
+                            }
+                            ?>
+                        ],
+                        label: 'Humidity',
+                        backgroundColor: '#63c2de',
+                        borderColor: 'rgba(255,255,255,.55)',
+                    }, ]
+                },
+                options: {
+
+                    maintainAspectRatio: false,
+                    legend: {
+                        display: false
+                    },
+                    responsive: true,
+                    tooltips: {
+                        mode: 'index',
+                        titleFontSize: 12,
+                        titleFontColor: '#000',
+                        bodyFontColor: '#000',
+                        backgroundColor: '#fff',
+                        titleFontFamily: 'Montserrat',
+                        bodyFontFamily: 'Montserrat',
+                        cornerRadius: 3,
+                        intersect: false,
+                    },
+                    scales: {
+                        xAxes: [ {
+                            gridLines: {
+                                color: 'transparent',
+                                zeroLineColor: 'transparent'
+                            },
+                            ticks: {
+                                fontSize: 2,
+                                fontColor: 'transparent'
+                            }
+                        } ],
+                        yAxes: [ {
+                            display:false,
+                            ticks: {
+                                display: false,
+                            }
+                        } ]
+                    },
+                    title: {
+                        display: false,
+                    },
+                    elements: {
+                        line: {
+                            tension: 0.00001,
                             borderWidth: 1
                         },
                         point: {

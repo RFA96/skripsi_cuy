@@ -21,7 +21,7 @@
                     <a href="index.php#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i class="menu-icon fa fa-thermometer"></i>Temperature</a>
                     <ul class="sub-menu children dropdown-menu">
                         <li><i class="fa fa-puzzle-piece"></i><a href="temp_table.php">Table</a></li>
-                        <li><i class="fa fa-id-badge"></i><a href="#">Graphic</a></li>
+                        <li><i class="fa fa-id-badge"></i><a href="temp_graphic.php">Graphic</a></li>
                     </ul>
                 </li>
                 <li class="menu-item-has-children dropdown">
