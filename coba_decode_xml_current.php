@@ -11,3 +11,5 @@
     $getHumidity = $getWeather->humidity['value'];
     $getCloud = $getWeather->clouds['name'];
     $getPrecipitation = $getWeather->precipitation['mode'];
+    $getWindSpeed = $getWeather->wind->speed['value'];
+    $getWindDirection = $getWeather->wind->direction['name'];

@@ -179,7 +179,7 @@
                         <div class="card-body pb-0">
                             <div class="dropdown float-right">
                                 <button class="btn bg-transparent dropdown-toggle theme-toggle text-light" type="button" id="dropdownMenuButton" data-toggle="dropdown">
-                                    <i class="fa fa-arrows-alt"></i>
+                                    <i class="fa fa-shower"></i>
                                 </button>
                                 <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
                                     <div class="dropdown-menu-content">
@@ -201,7 +201,7 @@
                     </div>
                 </div>
 
-                <div class="col-md-12">
+                <div class="col-md-4">
                     <aside class="profile-nav alt">
                         <section class="card">
                             <div class="card-header user-header alt bg-dark">
@@ -210,7 +210,7 @@
                                         <img class="align-self-center rounded-circle mr-3" style="width:85px; height:85px;" alt="" src="http://www.clker.com/cliparts/a/9/f/c/12284285012032586819sivvus_weather_symbols_2.svg.hi.png">
                                     </a>
                                     <div class="media-body">
-                                        <h2 class="text-light display-6">Current Weather</h2>
+                                        <h2 class="text-light display-6">T: <?php echo (int) $getTemperature;?> &#8451; | H: <?php echo $getHumidity."%";?></h2>
                                         <p>Lowokwaru, ID</p>
                                     </div>
                                 </div>
@@ -219,17 +219,18 @@
 
                             <ul class="list-group list-group-flush">
                                 <li class="list-group-item">
-                                    <a href="ui-cards.html#"> <i class="fa fa-envelope-o"></i> Temperature <span class="badge badge-primary pull-right"><?php echo $getTemperature;?> &#8451;</span></a>
+                                    <a href="ui-cards.html#"> <i class="fa fa-cloud"></i> Cloud <span class="badge badge-success pull-right"><?php echo ucwords($getCloud);?></span></a>
                                 </li>
                                 <li class="list-group-item">
-                                    <a href="ui-cards.html#"> <i class="fa fa-tasks"></i> Humidity <span class="badge badge-danger pull-right"><?php echo $getHumidity."%";?></span></a>
+                                    <a href="ui-cards.html#"> <i class="fa fa-snowflake-o"></i> Precipitation <span class="badge badge-warning pull-right r-activity"><?php echo $getPrecipitation;?></span></a>
                                 </li>
                                 <li class="list-group-item">
-                                    <a href="ui-cards.html#"> <i class="fa fa-bell-o"></i> Cloud <span class="badge badge-success pull-right"><?php echo ucwords($getCloud);?></span></a>
+                                    <a href="ui-cards.html#"> <i class="fa fa-fighter-jet"></i> Wind Speed <span class="badge badge-primary pull-right"><?php $windSpeedFinal = floatval($getWindSpeed) * 3.6; echo number_format($windSpeedFinal, 2);?> Km/h</span></a>
                                 </li>
                                 <li class="list-group-item">
-                                    <a href="ui-cards.html#"> <i class="fa fa-comments-o"></i> Precipitation <span class="badge badge-warning pull-right r-activity"><?php echo $getPrecipitation;?></span></a>
+                                    <a href="ui-cards.html#"> <i class="fa fa-arrows-alt"></i> Wind Direction <span class="badge badge-danger pull-right"><?php echo $getWindDirection;?></span></a>
                                 </li>
+
                             </ul>
 
                         </section>
