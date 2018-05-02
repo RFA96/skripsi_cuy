@@ -201,7 +201,7 @@
                     </div>
                 </div>
 
-                <div class="col-md-4">
+                <div class="col-md-6">
                     <aside class="profile-nav alt">
                         <section class="card">
                             <div class="card-header user-header alt bg-dark">
