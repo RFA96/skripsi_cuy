@@ -5,6 +5,7 @@
  * Date: 4/20/18
  * Time: 09:45 AM
  */
+    date_default_timezone_set("Asia/Jakarta");
     $servername = "192.168.88.17";
     $username = "rakaflyhigh";
     $password = "password";

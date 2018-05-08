@@ -13,3 +13,4 @@
     $getPrecipitation = $getWeather->precipitation['mode'];
     $getWindSpeed = $getWeather->wind->speed['value'];
     $getWindDirection = $getWeather->wind->direction['name'];
+?>

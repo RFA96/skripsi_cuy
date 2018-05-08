@@ -63,7 +63,7 @@
                 <h3 class="menu-title">Documentation</h3><!-- /.menu-title -->
 
                 <li>
-                    <a href="widgets.html"> <i class="menu-icon ti-camera"></i>Photos </a>
+                    <a href="photo_docs.php"> <i class="menu-icon ti-camera"></i>Photos </a>
                 </li>
                 <li>
                     <a href="widgets.html"> <i class="menu-icon ti-video-camera"></i>Video </a>
