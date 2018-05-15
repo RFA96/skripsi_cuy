@@ -6,7 +6,7 @@
  * Time: 09:45 AM
  */
     date_default_timezone_set("Asia/Jakarta");
-    $servername = "192.168.88.17";
+    $servername = "192.168.100.5";
     $username = "rakaflyhigh";
     $password = "password";
     $dbname = "skripsi_cuy";
