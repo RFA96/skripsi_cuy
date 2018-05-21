@@ -2,10 +2,10 @@
 /**
  * Created by PhpStorm.
  * User: raka_matsukaze
- * Date: 4/22/18
- * Time: 08:12 AM
+ * Date: 5/20/18
+ * Time: 16:49 PM
  */
-    include "db_connection.php"
+    include "db_connection.php";
 ?>
 <!doctype html>
     <head>
@@ -19,7 +19,7 @@
                 <div class="col-sm-4">
                     <div class="page-header float-left">
                         <div class="page-title">
-                            <h1>Temperature</h1>
+                            <h1>Humidity</h1>
                         </div>
                     </div>
                 </div>
@@ -37,7 +37,7 @@
             <div class="content mt-3">
                 <div class="animated fadeIn">
                     <div class="col-sm-6 col-lg-12">
-                        <h3>Database Suhu Udara</h3><hr>
+                        <h3>Database Kelembapan Udara</h3><hr>
                     </div>
                     <div class="col-sm-6 col-lg-12">
                         <h5>Pilih tanggal:</h5>
@@ -81,7 +81,7 @@
                                             while($baris = $q->fetch_array())
                                             {
                                                 ?>
-                                                    <option value="<?php echo $baris['tanggal']?>"><?php echo $baris['tahun']?></option>
+                                                <option value="<?php echo $baris['tahun']?>"><?php echo $baris['tahun']?></option>
                                                 <?php
                                             }
                                         ?>
@@ -97,20 +97,20 @@
                         <hr>
                         <div class="card">
                             <div class="card-header">
-                                <strong class="card-title">Data Temperatur</strong>
+                                <strong class="card-title">Data Kelembapan</strong>
                             </div>
                             <div class="card-body">
                                 <table id="bootstrap-data-table" class="table table-striped table-bordered">
                                     <thead>
                                         <tr>
                                             <th>No.</th>
-                                            <th>Suhu</th>
+                                            <th>Kelembapan</th>
                                             <th>Jam</th>
                                         </tr>
                                     </thead>
                                     <tbody>
                                         <?php
-                                            error_reporting(0);
+//                                            error_reporting(0);
                                             $nomor = 1;
                                             $tanggal = $_POST['tanggal'];
                                             $bulan = $_POST['bulan'];
@@ -121,11 +121,11 @@
                                             while ($row = $result->fetch_array())
                                             {
                                                 ?>
-                                                    <tr>
-                                                        <td><?php echo $nomor++?></td>
-                                                        <td><?php echo $row['temperature']?></td>
-                                                        <td><?php echo $row['waktu']?></td>
-                                                    </tr>
+                                                <tr>
+                                                    <td><?php echo $nomor++?></td>
+                                                    <td><?php echo $row['humidity']?></td>
+                                                    <td><?php echo $row['waktu']?></td>
+                                                </tr>
                                                 <?php
                                             }
                                         ?>

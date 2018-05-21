@@ -20,43 +20,43 @@
                 <li class="menu-item-has-children dropdown">
                     <a href="index.php#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i class="menu-icon fa fa-thermometer"></i>Temperature</a>
                     <ul class="sub-menu children dropdown-menu">
-                        <li><i class="fa fa-puzzle-piece"></i><a href="temp_table.php">Table</a></li>
-                        <li><i class="fa fa-id-badge"></i><a href="temp_graphic.php">Graphic</a></li>
+                        <li><i class="fa fa-table"></i><a href="temp_table.php">Table</a></li>
+                        <li><i class="fa fa-line-chart"></i><a href="temp_graphic.php">Graphic</a></li>
                     </ul>
                 </li>
                 <li class="menu-item-has-children dropdown">
                     <a href="index.html#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i class="menu-icon fa fa-snowflake-o"></i>Humidity</a>
                     <ul class="sub-menu children dropdown-menu">
-                        <li><i class="fa fa-table"></i><a href="tables-basic.html">Table</a></li>
-                        <li><i class="fa fa-table"></i><a href="tables-data.html">Graphic</a></li>
+                        <li><i class="fa fa-table"></i><a href="hum_table.php">Table</a></li>
+                        <li><i class="fa fa-line-chart"></i><a href="hum_graphic.php">Graphic</a></li>
                     </ul>
                 </li>
                 <li class="menu-item-has-children dropdown">
                     <a href="index.html#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i class="menu-icon fa fa-sun-o"></i>Light Intensity</a>
                     <ul class="sub-menu children dropdown-menu">
-                        <li><i class="menu-icon fa fa-th"></i><a href="forms-basic.html">Table</a></li>
-                        <li><i class="menu-icon fa fa-th"></i><a href="forms-advanced.html">Graphic</a></li>
+                        <li><i class="menu-icon fa fa-table"></i><a href="forms-basic.html">Table</a></li>
+                        <li><i class="menu-icon fa fa-line-chart"></i><a href="forms-advanced.html">Graphic</a></li>
                     </ul>
                 </li>
                 <li class="menu-item-has-children dropdown">
                     <a href="index.html#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i class="menu-icon fa fa-fighter-jet"></i>Wind Speed</a>
                     <ul class="sub-menu children dropdown-menu">
-                        <li><i class="menu-icon fa fa-th"></i><a href="forms-basic.html">Table</a></li>
-                        <li><i class="menu-icon fa fa-th"></i><a href="forms-advanced.html">Graphic</a></li>
+                        <li><i class="menu-icon fa fa-table"></i><a href="forms-basic.html">Table</a></li>
+                        <li><i class="menu-icon fa fa-line-chart"></i><a href="forms-advanced.html">Graphic</a></li>
                     </ul>
                 </li>
                 <li class="menu-item-has-children dropdown">
                     <a href="index.html#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i class="menu-icon fa fa-arrows-alt"></i>Wind Vane</a>
                     <ul class="sub-menu children dropdown-menu">
-                        <li><i class="menu-icon fa fa-th"></i><a href="forms-basic.html">Table</a></li>
-                        <li><i class="menu-icon fa fa-th"></i><a href="forms-advanced.html">Graphic</a></li>
+                        <li><i class="menu-icon fa fa-table"></i><a href="forms-basic.html">Table</a></li>
+                        <li><i class="menu-icon fa fa-line-chart"></i><a href="forms-advanced.html">Graphic</a></li>
                     </ul>
                 </li>
                 <li class="menu-item-has-children dropdown">
                     <a href="index.html#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i class="menu-icon fa fa-shower"></i>Rain Gauge</a>
                     <ul class="sub-menu children dropdown-menu">
-                        <li><i class="menu-icon fa fa-th"></i><a href="forms-basic.html">Table</a></li>
-                        <li><i class="menu-icon fa fa-th"></i><a href="forms-advanced.html">Graphic</a></li>
+                        <li><i class="menu-icon fa fa-table"></i><a href="forms-basic.html">Table</a></li>
+                        <li><i class="menu-icon fa fa-line-chart"></i><a href="forms-advanced.html">Graphic</a></li>
                     </ul>
                 </li>
 
