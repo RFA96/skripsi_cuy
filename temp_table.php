@@ -81,7 +81,7 @@
                                             while($baris = $q->fetch_array())
                                             {
                                                 ?>
-                                                    <option value="<?php echo $baris['tanggal']?>"><?php echo $baris['tahun']?></option>
+                                                    <option value="<?php echo $baris['tahun']?>"><?php echo $baris['tahun']?></option>
                                                 <?php
                                             }
                                         ?>
