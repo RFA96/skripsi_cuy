@@ -1,4 +1,4 @@
-<?php include "db_connection.php"; include "coba_decode_xml_current.php"?>
+<?php include "db_connection.php"; include "decode_xml_current_weather.php"?>
 <!doctype html>
     <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang=""> <![endif]-->
     <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8" lang=""> <![endif]-->
