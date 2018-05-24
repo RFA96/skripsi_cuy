@@ -11,5 +11,6 @@
     $windSpeedFinal = floatval($getWindSpeed) * 3.6;
     $windSpeedFinal_2 = number_format($windSpeedFinal, 2);
 
+    //Query
     mysqli_query($conn,"INSERT INTO wind(wind_speed, wind_direction) VALUES ('$windSpeedFinal_2', '$getWindDirection')");
 ?>
