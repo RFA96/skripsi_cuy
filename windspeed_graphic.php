@@ -2,24 +2,24 @@
 /**
  * Created by PhpStorm.
  * User: raka_matsukaze
- * Date: 5/20/18
- * Time: 18:23 PM
+ * Date: 5/25/18
+ * Time: 19:49 PM
  */
     include "db_connection.php";
 ?>
 <!doctype html>
     <head>
-        <?php include "head_tag.php"?>
+        <?php include "head_tag.php";?>
     </head>
     <body>
-        <?php include "left_panel.php"?>
+        <?php include "left_panel.php";?>
         <div id="right-panel" class="right-panel">
-            <?php include "header_tag.php";?>
+            <?php include "header_tag.php"?>
             <div class="breadcrumbs">
                 <div class="col-sm-4">
                     <div class="page-header float-left">
                         <div class="page-title">
-                            <h1>Humidity</h1>
+                            <h1>Wind Speed</h1>
                         </div>
                     </div>
                 </div>
@@ -38,15 +38,15 @@
                 <div class="animated fadeIn">
                     <div class="row">
                         <div class="col-sm-6 col-lg-12">
-                            <h3>Grafik Monitoring Kelembapan Udara Hari Ini</h3><hr>
+                            <h3>Grafik Monitoring Angin Hari Ini</h3><hr>
                         </div>
                         <div class="col-sm-6 col-lg-12">
                             <div class="card">
                                 <div class="card-header">
-                                    <strong>Data Kelembapan</strong>
+                                    <strong>Data Kecepatan dan Arah Angin</strong>
                                 </div>
                                 <div class="card-body">
-                                    <canvas id="humidity-chart"></canvas>
+                                    <canvas id="wind-chart"></canvas>
                                 </div>
                             </div>
                         </div>
@@ -54,9 +54,9 @@
                 </div>
             </div>
         </div>
-        <?php include "assets_js.php";?>
+        <?php include "assets_js.php"?>
         <script>
-            var ctx = document.getElementById( "humidity-chart" );
+            var ctx = document.getElementById( "wind-chart" );
             ctx.height = 150;
             var myChart = new Chart( ctx, {
                 type: 'line',
@@ -64,7 +64,7 @@
                     // labels: [ "2010", "2011", "2012", "2013", "2014", "2015", "2016" ],
                     labels : [
                         <?php
-                        $sql = "SELECT tanggal, waktu FROM suhu_kelembapan WHERE tanggal = '".date('Y-m-d')."'";
+                        $sql = "SELECT tanggal, waktu FROM wind WHERE tanggal = '".date('Y-m-d')."'";
                         $result = $conn->query($sql);
                         while($row = $result->fetch_array())
                         {
@@ -77,15 +77,15 @@
                     type: 'line',
                     defaultFontFamily: 'Montserrat',
                     datasets: [ {
-                        label: "Humidity",
+                        label: "Wind Speed",
                         // data: [ 0, 30, 10, 120, 50, 63, 10 ],
                         data: [
                             <?php
-                            $query = mysqli_query($conn, "SELECT humidity FROM suhu_kelembapan WHERE tanggal = '".date('Y-m-d')."'");
+                            $query = mysqli_query($conn, "SELECT wind_speed FROM wind WHERE tanggal = '".date('Y-m-d')."'");
                             while($row = mysqli_fetch_array($query, MYSQLI_BOTH))
                             {
-                                $humidity = $row['humidity'];
-                                echo $humidity.", ";
+                                $wind_speed = $row['wind_speed'];
+                                echo $wind_speed.", ";
                             }
                             ?>
                         ],

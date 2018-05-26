@@ -13,5 +13,5 @@
     $windSpeedFinal_2 = number_format($windSpeedFinal, 2);
 
     mysqli_query($conn, "INSERT INTO suhu_kelembapan(temperature, humidity, tanggal, waktu) VALUES ('".(int) $getTemperature."', '$getHumidity', '".date("Y-m-d")."', '".date("H:i:s")."')");
-    mysqli_query($conn,"INSERT INTO wind(wind_speed, wind_direction) VALUES ('$windSpeedFinal_2', '$getWindDirection')");
+    mysqli_query($conn,"INSERT INTO wind(wind_speed, wind_direction, tanggal, waktu) VALUES ('$windSpeedFinal_2', '$getWindDirection', '".date("Y-m-d")."', '".date("H:i:s")."')");
 ?>
