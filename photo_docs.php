@@ -47,11 +47,11 @@
                                 </div>
                                 <div class="form-group col-md-3">
                                     <label>Title</label>
-                                    <input type="text" class="form-control" name="title"/>
+                                    <input type="text" class="form-control" name="title" required/>
                                 </div>
                                 <div class="form-group col-md-3">
                                     <label>Description</label>
-                                    <input type="text" class="form-control" name="description"/>
+                                    <input type="text" class="form-control" name="description" required/>
                                 </div>
                                 <div class="form-group col-md-3">
                                     <label>&nbsp;</label><br>
@@ -60,19 +60,12 @@
                             </div>
                         </form><hr>
                     </div>
-                    <div class="col-sm-6 col-lg-12">
-                        <div class="card-deck">
-                            <div class="card">
-                                <img class="card-img-top" src="images/docs/photos/IMG_8667.JPG" alt="Card image cap" width="1280" height="720">
-                                <div class="card-body">
-                                    <h5 class="card-title">Card title</h5>
-                                    <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                                    <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-                                </div>
-                            </div>
 
-                        </div>
-                    </div>
+                    <!-- Foto di sini -->
+                    <?php
+
+                    ?>
+
                 </div>
             </div>
         </div>
