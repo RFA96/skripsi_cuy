@@ -63,8 +63,28 @@
 
                     <!-- Foto di sini -->
                     <?php
-
+                        $photo_result = $conn->query("SELECT * FROM documentation ORDER BY documentation.date DESC;");
+                        while($row_photo = $photo_result->fetch_array())
+                        {
+                            ?>
+                                <div class="col-md-4">
+                                    <div class="card">
+                                        <img class="card-img-top" src="images/docs/photos/<?php echo $row_photo['file_name']?>" width="260" height="180">
+                                        <div class="card-header bg-transparent"><h5 class="card-title"><?php echo $row_photo['name'];?></h5></div>
+                                        <div class="card-body">
+                                            <p class="card-text">
+                                                <?php
+                                                    echo "<font color='black'>".$row_photo['description']."</font>";
+                                                ?>
+                                            </p>
+                                        </div>
+                                        <div class="card-footer bg-transparent"><?php echo "<font color='red'>Updated on ".$row_photo['date']." at ".$row_photo['time']."</font>"?></div>
+                                    </div>
+                                </div>
+                            <?php
+                        }
                     ?>
+                    <!-- End of foto -->
 
                 </div>
             </div>
