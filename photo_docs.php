@@ -78,14 +78,19 @@
                                                 ?>
                                             </p>
                                         </div>
-                                        <div class="card-footer bg-transparent"><?php echo "<font color='red'>Updated on ".$row_photo['date']." at ".$row_photo['time']."</font>"?></div>
+                                        <div class="card-footer bg-transparent">
+                                            <?php echo "<font color='red'>Updated on ".$row_photo['date']." at ".$row_photo['time']."</font><br>"?>
+                                            <div class="btn-group">
+                                                <a href="photo_form.php" class="btn btn-outline-success">EDIT</a>
+                                                <a class="btn btn-outline-danger">DELETE</a>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                             <?php
                         }
                     ?>
                     <!-- End of foto -->
-
                 </div>
             </div>
         </div>
