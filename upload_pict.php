@@ -10,6 +10,7 @@
     $new_fileName = $file_info['filename']."_".time().".".$file_info['extension'];
     move_uploaded_file($_FILES['foto']['tmp_name'], "images/docs/photos/".$new_fileName);
     $location = "images/docs/photos/".$new_fileName;
+    chmod($location, 0777);
 
     $tanggal = date("Y-m-d");
     $jam = date("H:m:s");
@@ -20,7 +21,7 @@
     $sql = "INSERT INTO documentation(name, file_name,description, date, time) VALUES('$title', '$new_fileName','$description','$tanggal','$jam')";
     if($conn->query($sql))
     {
-        header("photo_docs.php");
+        header("Location: photo_docs.php?sukses=2");
         $conn->close();
     }
     else

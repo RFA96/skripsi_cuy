@@ -33,6 +33,43 @@
                     </div>
                 </div>
             </div>
+            <?php
+                error_reporting(0);
+                $sukses = $_GET['sukses'];
+                if($sukses == 1)
+                {
+                    ?>
+                        <div class="alert alert-success alert-dismissible fade show" role="alert">
+                            <strong>Data berhasil diubah!</strong>
+                            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                    <?php
+                }
+                else if($sukses == 2)
+                {
+                    ?>
+                        <div class="alert alert-success alert-dismissible fade show" role="alert">
+                            <strong>Data berhasil dimasukkan!</strong>
+                            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                    <?php
+                }
+                else if($sukses == 3)
+                {
+                    ?>
+                        <div class="alert alert-success alert-dismissible fade show" role="alert">
+                            <strong>Data berhasil dihapus!</strong>
+                            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                    <?php
+                }
+            ?>
             <div class="content mt-3">
                 <div class="animated fadeIn">
                     <div class="col-sm-12">
@@ -81,8 +118,8 @@
                                         <div class="card-footer bg-transparent">
                                             <?php echo "<font color='red'>Updated on ".$row_photo['date']." at ".$row_photo['time']."</font><br>"?>
                                             <div class="btn-group">
-                                                <a href="photo_form.php" class="btn btn-outline-success">EDIT</a>
-                                                <a class="btn btn-outline-danger">DELETE</a>
+                                                <a href="photo_form.php?id=<?php echo $row_photo['record_id']?>" class="btn btn-outline-success">EDIT</a>
+                                                <a href="photo_delete.php?id=<?php echo $row_photo['record_id']?>" class="btn btn-outline-danger" onclick="return confirm('Yakin mau menghapus data ini?')">DELETE</a>
                                             </div>
                                         </div>
                                     </div>
