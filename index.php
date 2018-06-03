@@ -57,7 +57,8 @@
                                 </div>
                             </div>
                             <h4 class="mb-0">
-                                <span class="count">28</span> &#8451;
+<!--                                <span class="count">28</span> &#8451;-->
+                                <span id="ajax_suhu"></span> &#8451;
                             </h4>
                             <p class="text-light">Suhu</p>
 
@@ -84,7 +85,8 @@
                             </div>
                         </div>
                         <h4 class="mb-0">
-                            <span class="count"></span> %
+<!--                            <span class="count"></span> %-->
+                            <span id="ajax_kelembapan"></span> %
                         </h4>
                         <p class="text-light">Kelembapan</p>
 
@@ -421,6 +423,20 @@
                     }
                 }
             } );
+        </script>
+        <script>
+            $(document).ready(function () {
+                $.ajaxSetup({cache: false});
+                setInterval(function () {
+                    //Dari sensor
+                    // $('#ajax_suhu').load('api/nilai_suhu.php');
+                    // $('#ajax_kelembapan').load('api/nilai_kelembapan.php');
+
+                    //Dari open weather
+                    $('#ajax_suhu').load('api/nilai_suhu_openweather.php');
+                    $('#ajax_kelembapan').load('api/nilai_kelembapan_openweather.php');
+                }, 300);
+            });
         </script>
     </body>
 </html>
