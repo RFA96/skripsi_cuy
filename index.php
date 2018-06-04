@@ -112,7 +112,8 @@
                             </div>
                         </div>
                         <h4 class="mb-0">
-                            <span class="count">10468</span> lx
+<!--                            <span class="count">10468</span> lx-->
+                            <span id="ajax_intesitascahaya" class="count"></span> lx
                         </h4>
                         <p class="text-light">Light Intensity</p>
 
@@ -139,7 +140,8 @@
                             </div>
                         </div>
                         <h4 class="mb-0">
-                            <span class="count">10468</span> Km/h
+<!--                            <span class="count">10468</span> Km/h-->
+                            <span id="ajax_kecepatanangin" class="count"></span> Km/h
                         </h4>
                         <p class="text-light">Wind Speed</p>
 
@@ -166,9 +168,10 @@
                             </div>
                         </div>
                         <h4 class="mb-0">
-                            <span class="count">10468</span>
+<!--                            <span class="count">10468</span>-->
+                            <span id="ajax_arahangin" class="count"></span>
                         </h4>
-                        <p class="text-light">Wind Vane</p>
+                        <p class="text-light">Wind Direction</p>
                     </div>
                     <div class="chart-wrapper px-0" style="height:70px;" height="70">
 
@@ -431,11 +434,14 @@
                     //Dari sensor
                     // $('#ajax_suhu').load('api/nilai_suhu.php');
                     // $('#ajax_kelembapan').load('api/nilai_kelembapan.php');
+                    $('#ajax_intesitascahaya').load('api/nilai_intensitas_cahaya.php');
+                    $('#ajax_arahangin').load('api/nilai_arah_angin.php');
+                    $('#ajax_kecepatanangin').load('api/nilai_kecepatan_angin.php');
 
                     //Dari open weather
                     $('#ajax_suhu').load('api/nilai_suhu_openweather.php');
                     $('#ajax_kelembapan').load('api/nilai_kelembapan_openweather.php');
-                }, 300);
+                }, 5000);
             });
         </script>
     </body>

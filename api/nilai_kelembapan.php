@@ -6,7 +6,8 @@
  * Time: 23:03 PM
  */
     include "koneksi.php";
-    $sql = $conn->query("SELECT suhu, kelembapan FROM realtime_suhu_kelembapan ORDER BY id DESC LIMIT 1");
+//    $sql = $conn->query("SELECT suhu, kelembapan FROM realtime_suhu_kelembapan ORDER BY id DESC LIMIT 1");
+    $sql = $conn->query("SELECT suhu, kelembapan FROM skripsi_realtime.coba_koneksi_arduino ORDER BY record_id DESC LIMIT 1");
     $data = $sql->fetch_array();
     $kelembapan = $data['kelembapan'];
     echo $kelembapan;
