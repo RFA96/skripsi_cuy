@@ -45,13 +45,6 @@
                         <li><i class="menu-icon fa fa-line-chart"></i><a href="windspeed_graphic.php">Graphic</a></li>
                     </ul>
                 </li>
-<!--                <li class="menu-item-has-children dropdown">-->
-<!--                    <a href="index.html#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i class="menu-icon fa fa-arrows-alt"></i>Wind Vane</a>-->
-<!--                    <ul class="sub-menu children dropdown-menu">-->
-<!--                        <li><i class="menu-icon fa fa-table"></i><a href="forms-basic.html">Table</a></li>-->
-<!--                        <li><i class="menu-icon fa fa-line-chart"></i><a href="forms-advanced.html">Graphic</a></li>-->
-<!--                    </ul>-->
-<!--                </li>-->
                 <li class="menu-item-has-children dropdown">
                     <a href="index.html#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i class="menu-icon fa fa-shower"></i>Rain Gauge</a>
                     <ul class="sub-menu children dropdown-menu">
@@ -60,13 +53,16 @@
                     </ul>
                 </li>
 
-                <h3 class="menu-title">Documentation</h3><!-- /.menu-title -->
+                <h3 class="menu-title">Documentations</h3><!-- /.menu-title -->
 
                 <li>
                     <a href="photo_docs.php"> <i class="menu-icon ti-camera"></i>Photos </a>
                 </li>
                 <li>
-                    <a href="widgets.html"> <i class="menu-icon ti-video-camera"></i>Video </a>
+                    <a> <i class="menu-icon ti-video-camera"></i>Videos </a>
+                </li>
+                <li>
+                    <a href="log_page.php"><i class="menu-icon fa fa-book"></i> Logs</a>
                 </li>
             </ul>
         </div><!-- /.navbar-collapse -->
