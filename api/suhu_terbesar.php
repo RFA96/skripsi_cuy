@@ -42,5 +42,7 @@
     $jamterbanyak = array_search($iterbanyak, $s[$maxsuhu]);
     // ambil key(jam) berdasarkan value tertinggi
 
+    $jamterbanyak = $jamterbanyak.":00:00";
     echo "<strong>Suhu terbesar adalah ".$maxsuhu." pada jam ".$jamterbanyak."</strong>";
+//    $conn->query("INSERT INTO suhu_tertinggi(suhu, waktu) VALUES ($maxsuhu, '$jamterbanyak') ");
 ?>
