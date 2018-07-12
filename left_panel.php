@@ -52,6 +52,13 @@
                         <li><i class="menu-icon fa fa-line-chart"></i><a href="forms-advanced.html">Graphic</a></li>
                     </ul>
                 </li>
+                <li class="menu-item-has-children dropdown">
+                    <a href="index.html#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i class="menu-icon fa fa-wrench"></i>Machine Learning</a>
+                    <ul class="sub-menu children dropdown-menu">
+                        <li><i class="menu-icon fa fa-thermometer-empty"></i><a href="machine_learning_suhu_kelembapan.php">Suhu dan Kelembapan</a></li>
+                        <li><i class="menu-icon fa fa-leaf"></i><a href="forms-advanced.html">Angin</a></li>
+                    </ul>
+                </li>
 
                 <h3 class="menu-title">Documentations</h3><!-- /.menu-title -->
 
