@@ -5,6 +5,7 @@
  * Date: 7/13/18
  * Time: 18:29 PM
  */
+    error_reporting(0);
     include 'db_connection.php';
     $batas_kecepatan_angin = 5;
     $sekarang = date('Y-m-d');
