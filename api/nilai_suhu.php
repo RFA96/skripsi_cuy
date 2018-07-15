@@ -10,5 +10,5 @@
 //    $sql = $conn->query("SELECT suhu, kelembapan FROM skripsi_realtime.coba_koneksi_arduino ORDER BY record_id DESC LIMIT 1");
     $data = $sql->fetch_array();
     $suhu = $data['suhu'];
-    echo $suhu;
+    echo $suhu.' derajat celcius';
 ?>

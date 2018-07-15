@@ -9,7 +9,7 @@
     include "db_connection.php";
     $sekarang = date('Y-m-d');
     $seminggu_sebelumnya = date('Y-m-d', strtotime('-7 days', strtotime(date('Y-m-d'))));
-    $batas_suhu = 27;
+    $batas_suhu = 28;
     $batas_humidity = 50-1;
 ?>
 <!doctype html>
@@ -118,7 +118,7 @@
                                     }
                                 }
                                 echo "<hr>";
-                                echo "<strong><b>Suhu</b> terbesar adalah ".$maxsuhu." dengan <b>Humidity</b> minimum ".$minimum_humidity." pada jam ".$jamterbanyak.":00:00</strong>";
+                                echo "<strong>Suhu</strong> terbesar adalah <b>".$maxsuhu."</b> dengan <i><b>Humidity</b></i> minimum <b>".$minimum_humidity."</b> pada jam ".$jamterbanyak.":00:00";
                             ?>
                         </div>
                     </div>
