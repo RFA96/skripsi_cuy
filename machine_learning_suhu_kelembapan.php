@@ -9,7 +9,7 @@
     include "db_connection.php";
     $sekarang = date('Y-m-d');
     $seminggu_sebelumnya = date('Y-m-d', strtotime('-7 days', strtotime(date('Y-m-d'))));
-    $batas_suhu = 28;
+    $batas_suhu = 25;
     $batas_humidity = 50-1;
 ?>
 <!doctype html>

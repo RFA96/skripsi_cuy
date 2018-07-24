@@ -57,6 +57,7 @@
                     <ul class="sub-menu children dropdown-menu">
                         <li><i class="menu-icon fa fa-thermometer-empty"></i><a href="machine_learning_suhu_kelembapan.php">Suhu dan Kelembapan</a></li>
                         <li><i class="menu-icon fa fa-leaf"></i><a href="machine_learning_kecepatan_angin.php">Kecepatan Angin</a></li>
+                        <li><i class="menu-icon fa fa-user"></i><a href="ml_suhukelembapan_2.php">Demo Pak Eko</a> </li>
                     </ul>
                 </li>
 

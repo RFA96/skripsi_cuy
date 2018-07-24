@@ -11,9 +11,15 @@
     if($data['suhu'] > 30)
     {
         $suhu_akhir = $data['suhu'].'<br>Lakukan pendinginan!<br>';
+        $cmd = escapeshellcmd('/Users/raka_matsukaze/Documents/python_docs/suhu_kelembapan/jam_11.py');
+        shell_exec($cmd);
+//        shell_exec('/Users/raka_matsukaze/Documents/python_docs/suhu_kelembapan/jam_11.py');
     }
     else
     {
         $suhu_akhir = $data['suhu'].'<br>Suhu normal!<br>';
+        $cmd = escapeshellcmd('/Users/raka_matsukaze/Documents/python_docs/suhu_kelembapan/jam_12.py');
+        shell_exec($cmd);
+//        shell_exec('/Users/raka_matsukaze/Documents/python_docs/suhu_kelembapan/jam_12.py');
     }
     echo $suhu_akhir;
