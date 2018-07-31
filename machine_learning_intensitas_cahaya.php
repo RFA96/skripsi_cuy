@@ -7,7 +7,7 @@
  */
     error_reporting(0);
     include 'db_connection.php';
-    $batas_kecepatan_angin = 5;
+    $batas_intensitas_cahaya = 250;
     $sekarang = date('Y-m-d');
     $seminggu_sebelumnya = date('Y-m-d', strtotime('-7 days', strtotime(date('Y-m-d'))));
 ?>
@@ -49,22 +49,22 @@
                             <canvas id="intensitas_cahaya_chart"></canvas><hr>
                             <h3>Hasil Analisis</h3><br>
                             <?php
-                                $result = $conn->query("SELECT wind_speed, waktu FROM wind WHERE wind_speed > $batas_kecepatan_angin AND tanggal BETWEEN '$seminggu_sebelumnya' AND '$sekarang'");
+                                $result = $conn->query("SELECT luminance, tanggal, jam FROM skripsi_cuy.light_intensity WHERE luminance > $batas_intensitas_cahaya AND tanggal BETWEEN '$seminggu_sebelumnya' AND '$sekarang'");
                                 while($row = $result->fetch_array())
                                 {
-                                    $waktu = explode(":", $row['waktu']);
-                                    $s[$row['wind_speed']][$waktu[0]]+=1;
+                                    $waktu = explode(":", $row['jam']);
+                                    $s[$row['luminance']][$waktu[0]]+=1;
                                 }
-                                $max_windspeed = max(array_keys($s));
-                                $iterbanyak = max(array_values($s[$max_windspeed]));
-                                $jamterbanyak = array_search($iterbanyak, $s[$max_windspeed]);
+                                $max_lightintensity = max(array_keys($s));
+                                $iterbanyak = max(array_values($s[$max_lightintensity]));
+                                $jamterbanyak = array_search($iterbanyak, $s[$max_lightintensity]);
 
                                 echo "<pre>";
                                 print_r($s);
                                 echo "</pre>";
 
                                 echo "<hr>";
-                                echo "Intensitas cahaya matahari terbesar adalah ".$max_windspeed." lx, pada jam ".$jamterbanyak.":00:00";
+                                echo "Intensitas cahaya matahari terbesar adalah ".$max_lightintensity." lx, pada jam ".$jamterbanyak.":00:00";
                             ?>
                         </div>
                     </div>
@@ -81,10 +81,12 @@
                     // labels: [ "2010", "2011", "2012", "2013", "2014", "2015", "2016" ],
                     labels : [
                         <?php
-                        $result = $conn->query("SELECT * FROM skripsi_realtime.intensitas_cahaya LIMIT 10");
+                        $result = $conn->query("SELECT luminance, tanggal, jam FROM skripsi_cuy.light_intensity WHERE luminance > $batas_intensitas_cahaya AND tanggal BETWEEN '$seminggu_sebelumnya' AND '$sekarang'");
                         while($row = $result->fetch_array())
                         {
-                            echo "'2018-07-30', ";
+                            $tanggal = $row['tanggal'];
+                            $jam = $row['jam'];
+                            echo "'$tanggal | $jam',";
                         }
                         ?>
                     ],
@@ -95,10 +97,10 @@
                         // data: [ 0, 30, 10, 120, 50, 63, 10 ],
                         data: [
                             <?php
-                            $result = $conn->query("SELECT * FROM skripsi_realtime.intensitas_cahaya LIMIT 10");
+                            $result = $conn->query("SELECT luminance, tanggal, jam FROM skripsi_cuy.light_intensity WHERE luminance > $batas_intensitas_cahaya AND tanggal BETWEEN '$seminggu_sebelumnya' AND '$sekarang'");
                             while($row = $result->fetch_array())
                             {
-                                $value = $row[1];
+                                $value = $row['luminance'];
                                 echo $value.", ";
                             }
                             ?>

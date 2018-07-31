@@ -7,8 +7,8 @@
  */
     include "koneksi.php";
 
-    $sql = $conn->query("SELECT nilai FROM skripsi_realtime.intensitas_cahaya ORDER BY record_id DESC LIMIT 1");
+    $sql = $conn->query("SELECT luminance FROM skripsi_cuy.light_intensity ORDER BY record_id DESC LIMIT 1");
     $data = $sql->fetch_array();
-    $intensitas_cahaya = $data['nilai'];
+    $intensitas_cahaya = $data['luminance'];
     echo $intensitas_cahaya;
 ?>
