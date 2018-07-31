@@ -967,37 +967,42 @@
       <Charset>utf8mb4</Charset>
       <DefaultForCharset>0</DefaultForCharset>
     </collation>
-    <table id="243" parent="7" name="coba_koneksi_arduino"/>
-    <table id="244" parent="7" name="documentation"/>
-    <table id="245" parent="7" name="light_intensity"/>
-    <table id="246" parent="7" name="log_activities"/>
-    <table id="247" parent="7" name="suhu_kelembapan"/>
-    <table id="248" parent="7" name="suhu_tertinggi"/>
-    <table id="249" parent="7" name="wind"/>
-    <column id="250" parent="243" name="record_id">
+    <table id="243" parent="7" name="documentation"/>
+    <table id="244" parent="7" name="light_intensity"/>
+    <table id="245" parent="7" name="log_activities"/>
+    <table id="246" parent="7" name="suhu_kelembapan"/>
+    <table id="247" parent="7" name="wind"/>
+    <column id="248" parent="243" name="record_id">
       <Position>1</Position>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="251" parent="243" name="suhu">
+    <column id="249" parent="243" name="name">
       <Position>2</Position>
-      <DataType>int(11)|0s</DataType>
-      <NotNull>1</NotNull>
+      <DataType>varchar(35)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="252" parent="243" name="kelembapan">
+    <column id="250" parent="243" name="file_name">
       <Position>3</Position>
-      <DataType>int(11)|0s</DataType>
+      <DataType>varchar(100)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="253" parent="243" name="tanggal_waktu">
+    <column id="251" parent="243" name="description">
       <Position>4</Position>
-      <DataType>timestamp|0s</DataType>
-      <NotNull>1</NotNull>
-      <DefaultExpression>CURRENT_TIMESTAMP</DefaultExpression>
+      <DataType>text|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="252" parent="243" name="date">
+      <Position>5</Position>
+      <DataType>date|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="253" parent="243" name="time">
+      <Position>6</Position>
+      <DataType>time|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
     <key id="254" parent="243" name="PRIMARY">
@@ -1012,171 +1017,109 @@
       <SequenceIdentity>1</SequenceIdentity>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="256" parent="244" name="name">
+    <column id="256" parent="244" name="luminance">
       <Position>2</Position>
-      <DataType>varchar(35)|0s</DataType>
+      <DataType>int(11)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="257" parent="244" name="file_name">
+    <column id="257" parent="244" name="tanggal">
       <Position>3</Position>
-      <DataType>varchar(100)|0s</DataType>
-      <NotNull>1</NotNull>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="258" parent="244" name="description">
-      <Position>4</Position>
-      <DataType>text|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="259" parent="244" name="date">
-      <Position>5</Position>
       <DataType>date|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="260" parent="244" name="time">
-      <Position>6</Position>
+    <column id="258" parent="244" name="jam">
+      <Position>4</Position>
       <DataType>time|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <key id="261" parent="244" name="PRIMARY">
+    <key id="259" parent="244" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>record_id</ColNames>
       <Primary>1</Primary>
     </key>
-    <column id="262" parent="245" name="record_id">
+    <column id="260" parent="245" name="record_id">
       <Position>1</Position>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="263" parent="245" name="luminance">
-      <Position>2</Position>
-      <DataType>int(11)|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="264" parent="245" name="tanggal">
-      <Position>3</Position>
-      <DataType>date|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="265" parent="245" name="jam">
-      <Position>4</Position>
-      <DataType>time|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <key id="266" parent="245" name="PRIMARY">
-      <NameSurrogate>1</NameSurrogate>
-      <ColNames>record_id</ColNames>
-      <Primary>1</Primary>
-    </key>
-    <column id="267" parent="246" name="record_id">
-      <Position>1</Position>
-      <DataType>int(11)|0s</DataType>
-      <NotNull>1</NotNull>
-      <SequenceIdentity>1</SequenceIdentity>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="268" parent="246" name="activity">
+    <column id="261" parent="245" name="activity">
       <Position>2</Position>
       <DataType>text|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="269" parent="246" name="tanggal_waktu">
+    <column id="262" parent="245" name="tanggal_waktu">
       <Position>3</Position>
       <DataType>timestamp|0s</DataType>
       <DefaultExpression>CURRENT_TIMESTAMP</DefaultExpression>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <key id="270" parent="246" name="PRIMARY">
+    <key id="263" parent="245" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>record_id</ColNames>
       <Primary>1</Primary>
     </key>
-    <column id="271" parent="247" name="record_id">
+    <column id="264" parent="246" name="record_id">
       <Position>1</Position>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="272" parent="247" name="humidity">
+    <column id="265" parent="246" name="humidity">
       <Position>2</Position>
-      <DataType>varchar(3)|0s</DataType>
+      <DataType>int(11)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="273" parent="247" name="temperature">
+    <column id="266" parent="246" name="temperature">
       <Position>3</Position>
-      <DataType>varchar(3)|0s</DataType>
+      <DataType>int(11)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="274" parent="247" name="tanggal">
+    <column id="267" parent="246" name="tanggal">
       <Position>4</Position>
       <DataType>date|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="275" parent="247" name="waktu">
+    <column id="268" parent="246" name="waktu">
       <Position>5</Position>
       <DataType>time|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <key id="276" parent="247" name="PRIMARY">
+    <key id="269" parent="246" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>record_id</ColNames>
       <Primary>1</Primary>
     </key>
-    <column id="277" parent="248" name="record_id">
+    <column id="270" parent="247" name="record_id">
       <Position>1</Position>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="278" parent="248" name="suhu">
+    <column id="271" parent="247" name="wind_speed">
       <Position>2</Position>
-      <DataType>int(11)|0s</DataType>
-      <NotNull>1</NotNull>
+      <DataType>float|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="279" parent="248" name="waktu">
-      <Position>3</Position>
-      <DataType>time|0s</DataType>
-      <NotNull>1</NotNull>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <key id="280" parent="248" name="PRIMARY">
-      <NameSurrogate>1</NameSurrogate>
-      <ColNames>record_id</ColNames>
-      <Primary>1</Primary>
-    </key>
-    <column id="281" parent="249" name="record_id">
-      <Position>1</Position>
-      <DataType>int(11)|0s</DataType>
-      <NotNull>1</NotNull>
-      <SequenceIdentity>1</SequenceIdentity>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="282" parent="249" name="wind_speed">
-      <Position>2</Position>
-      <DataType>varchar(5)|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="283" parent="249" name="wind_direction">
+    <column id="272" parent="247" name="wind_direction">
       <Position>3</Position>
       <DataType>varchar(30)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="284" parent="249" name="tanggal">
+    <column id="273" parent="247" name="tanggal">
       <Position>4</Position>
       <DataType>date|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="285" parent="249" name="waktu">
+    <column id="274" parent="247" name="waktu">
       <Position>5</Position>
       <DataType>time|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <key id="286" parent="249" name="PRIMARY">
+    <key id="275" parent="247" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>record_id</ColNames>
       <Primary>1</Primary>

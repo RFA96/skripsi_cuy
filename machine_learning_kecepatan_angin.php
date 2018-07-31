@@ -23,7 +23,7 @@
                 <div class="col-sm-4">
                     <div class="page-header float-left">
                         <div class="page-title">
-                            <h1>Machine Learning</h1>
+                            <h1>Analisis</h1>
                         </div>
                     </div>
                 </div>
@@ -42,11 +42,11 @@
                 <div class="animated fadeIn">
                     <div class="row">
                         <div class="col-sm-6 col-lg-12">
-                            <h3>Analisa</h3><hr>
+                            <h3>Analisis</h3><hr>
                         </div>
                         <div class="col-sm-6 col-lg-12">
                             <canvas id="kecepatan_angin_chart"></canvas><hr>
-                            <h3>Hasil Analisa</h3><br>
+                            <h3>Hasil Analisis</h3><br>
                             <?php
                                 $result = $conn->query("SELECT wind_speed, waktu FROM wind WHERE wind_speed > $batas_kecepatan_angin AND tanggal BETWEEN '$seminggu_sebelumnya' AND '$sekarang'");
                                 while($row = $result->fetch_array())

@@ -32,16 +32,6 @@
 
 
             <div class="content mt-3">
-<!--                <div class="col-sm-12">-->
-<!--                    <div class="alert  alert-success alert-dismissible fade show" role="alert">-->
-<!--                        <span class="badge badge-pill badge-success">Success</span> You successfully read this important alert message.-->
-<!--                        <button type="button" class="close" data-dismiss="alert" aria-label="Close">-->
-<!--                            <span aria-hidden="true">&times;</span>-->
-<!--                        </button>-->
-<!--                    </div>-->
-<!--                </div>-->
-
-
                 <div class="col-sm-6 col-lg-4">
                     <div class="card text-white bg-flat-color-1">
                         <div class="card-body pb-0">
@@ -57,7 +47,6 @@
                                 </div>
                             </div>
                             <h4 class="mb-0">
-<!--                                <span class="count">28</span> &#8451;-->
                                 <span id="ajax_suhu"></span> &#8451;
                             </h4>
                             <p class="text-light">Suhu</p>
@@ -85,7 +74,6 @@
                             </div>
                         </div>
                         <h4 class="mb-0">
-<!--                            <span class="count"></span> %-->
                             <span id="ajax_kelembapan"></span> %
                         </h4>
                         <p class="text-light">Kelembapan</p>
@@ -112,7 +100,6 @@
                             </div>
                         </div>
                         <h4 class="mb-0">
-<!--                            <span class="count">10468</span> lx-->
                             <span id="ajax_intesitascahaya" class="count"></span> lx
                         </h4>
                         <p class="text-light">Light Intensity</p>
@@ -125,7 +112,7 @@
             </div>
             <!--/.col-->
 
-            <div class="col-sm-6 col-lg-4">
+            <div class="col-sm-6 col-lg-6">
                 <div class="card text-white bg-flat-color-4">
                     <div class="card-body pb-0">
                         <div class="dropdown float-right">
@@ -153,7 +140,7 @@
             </div>
         <!--/.col-->
 
-            <div class="col-sm-6 col-lg-4">
+            <div class="col-sm-6 col-lg-6">
                 <div class="card text-white bg-flat-color-5">
                     <div class="card-body pb-0">
                         <div class="dropdown float-right">
@@ -179,40 +166,13 @@
                 </div>
             </div>
         <!--/.col-->
-                <div class="col-sm-6 col-lg-4">
-                    <div class="card text-white bg-flat-color-1">
-                        <div class="card-body pb-0">
-                            <div class="dropdown float-right">
-                                <button class="btn bg-transparent dropdown-toggle theme-toggle text-light" type="button" id="dropdownMenuButton" data-toggle="dropdown">
-                                    <i class="fa fa-shower"></i>
-                                </button>
-                                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                                    <div class="dropdown-menu-content">
-                                        <a class="dropdown-item" href="index.html#">See graphics...</a>
-                                        <a class="dropdown-item" href="index.html#">See data...</a>
-                                    </div>
-                                </div>
-                            </div>
-                            <h4 class="mb-0">
-                                <span class="count">10468</span> mm
-                            </h4>
-                            <p class="text-light">Rain Gauge</p>
-
-                        </div>
-
-                        <div class="chart-wrapper px-0" style="height:70px;" height="70">
-                            <canvas id="widgetChart5"></canvas>
-                        </div>
-                    </div>
-                </div>
-
                 <div class="col-md-12">
                     <aside class="profile-nav alt">
                         <section class="card">
                             <div class="card-header user-header alt bg-dark">
                                 <div class="media">
                                     <a href="ui-cards.html#">
-                                        <img class="align-self-center rounded-circle mr-3" style="width:85px; height:85px;" alt="" src="http://www.clker.com/cliparts/a/9/f/c/12284285012032586819sivvus_weather_symbols_2.svg.hi.png">
+                                        <img class="align-self-center rounded-circle mr-3" style="width:85px; height:85px;" alt="" src="http://openweathermap.org/img/w/<?php echo $getWeatherIcon?>.png">
                                     </a>
                                     <div class="media-body">
                                         <h2 class="text-light display-6">T: <?php echo (int) $getTemperature;?> &#8451; | H: <?php echo $getHumidity."%";?></h2>

@@ -24,7 +24,7 @@
                 <div class="col-sm-4">
                     <div class="page-header float-left">
                         <div class="page-title">
-                            <h1>Machine Learning</h1>
+                            <h1>Analisis</h1>
                         </div>
                     </div>
                 </div>
@@ -43,7 +43,7 @@
                 <div class="animated fadeIn">
                     <div class="row">
                         <div class="col-sm-6 col-lg-12">
-                            <h3>Analisa</h3><hr>
+                            <h3>Analisis</h3><hr>
                         </div>
                         <div class="col-sm-6 col-lg-12">
                             <canvas id="temperature-chart"></canvas><hr>
@@ -77,7 +77,7 @@
 
                                 $jamterbanyak = array_search($iterbanyak, $s[$maxsuhu]);
 
-                                echo "<h3>Hasil Analisa</h3>";
+                                echo "<h3>Hasil Analisis</h3>";
                                 $d_temp = $conn->query("SELECT DISTINCT temperature FROM suhu_kelembapan where temperature > $batas_suhu");
                                 $d_humidity = "SELECT DISTINCT  humidity FROM suhu_kelembapan WHERE temperature = ";
                                 $d_jumhum = "SELECT COUNT(humidity) as jumlah, humidity, HOUR(waktu) as waktu FROM suhu_kelembapan WHERE temperature = ";

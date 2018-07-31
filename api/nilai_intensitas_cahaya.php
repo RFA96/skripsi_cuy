@@ -7,8 +7,8 @@
  */
     include "koneksi.php";
 
-    $sql = $conn->query("SELECT intensitas_cahaya FROM skripsi_realtime.coba_koneksi_arduino ORDER BY record_id DESC LIMIT 1");
+    $sql = $conn->query("SELECT nilai FROM skripsi_realtime.intensitas_cahaya ORDER BY record_id DESC LIMIT 1");
     $data = $sql->fetch_array();
-    $intensitas_cahaya = $data['intensitas_cahaya'];
+    $intensitas_cahaya = $data['nilai'];
     echo $intensitas_cahaya;
 ?>

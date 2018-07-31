@@ -96,27 +96,7 @@
                         pointRadius: 5,
                         pointBorderColor: 'transparent',
                         pointBackgroundColor: 'rgba(220,53,69,0.75)',
-                    }, {
-                        label: "Humidity",
-                        // data: [ 0, 50, 40, 80, 40, 79, 120 ],
-                        //data: [
-                        //    <?php
-                        //        $query = mysqli_query($conn, "SELECT humidity FROM suhu_kelembapan WHERE tanggal = '".date('Y-m-d')."'");
-                        //        while($row = mysqli_fetch_array($query, MYSQLI_BOTH))
-                        //        {
-                        //            $humidity = $row['humidity'];
-                        //            echo $humidity.", ";
-                        //        }
-                        //    ?>
-                        //],
-                        backgroundColor: 'transparent',
-                        borderColor: 'rgba(40,167,69,0.75)',
-                        borderWidth: 3,
-                        pointStyle: 'circle',
-                        pointRadius: 5,
-                        pointBorderColor: 'transparent',
-                        pointBackgroundColor: 'rgba(40,167,69,0.75)',
-                    } ]
+                    }]
                 },
                 options: {
                     responsive: true,
@@ -143,7 +123,7 @@
                         xAxes: [ {
                             display: true,
                             gridLines: {
-                                display: false,
+                                display: true,
                                 drawBorder: false
                             },
                             scaleLabel: {
@@ -154,18 +134,43 @@
                         yAxes: [ {
                             display: true,
                             gridLines: {
-                                display: false,
+                                display: true,
                                 drawBorder: false
                             },
                             scaleLabel: {
                                 display: true,
                                 labelString: 'Kelembapan Udara'
+                            },
+                            id: 'y-axis-1',
+                            ticks: {
+                                beginAtZero: true,
+                                max: 100
                             }
                         } ]
                     },
                     title: {
                         display: false,
-                        text: 'Graphic'
+                        text: 'Humidity Graphic'
+                    },
+                    annotation: {
+                        drawTime: "afterDraw",
+                        annotations: [{
+                            id: 'box1',
+                            type: 'box',
+                            yScaleID: 'y-axis-1',
+                            yMin: 0,
+                            yMax: 40,
+                            backgroundColor: 'rgba(200, 100, 200, 0.2)',
+                            borderColor: 'rgba(100, 100, 100, 0.2)',
+                        },{
+                            id: 'box2',
+                            type: 'box',
+                            yScaleID: 'y-axis-1',
+                            yMin: 40,
+                            yMax: 100,
+                            backgroundColor: 'rgba(148, 255, 162, 0.3)',
+                            borderColor: 'rgba(200, 100, 200, 0.2)',
+                        }]
                     }
                 }
             } );

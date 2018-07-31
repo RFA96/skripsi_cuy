@@ -34,8 +34,8 @@
                 <li class="menu-item-has-children dropdown">
                     <a href="index.html#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i class="menu-icon fa fa-sun-o"></i>Light Intensity</a>
                     <ul class="sub-menu children dropdown-menu">
-                        <li><i class="menu-icon fa fa-table"></i><a href="forms-basic.html">Table</a></li>
-                        <li><i class="menu-icon fa fa-line-chart"></i><a href="forms-advanced.html">Graphic</a></li>
+                        <li><i class="menu-icon fa fa-table"></i><a href=intensity_table.php>Table</a></li>
+                        <li><i class="menu-icon fa fa-line-chart"></i><a href="intensity_graphic.php">Graphic</a></li>
                     </ul>
                 </li>
                 <li class="menu-item-has-children dropdown">
@@ -46,18 +46,11 @@
                     </ul>
                 </li>
                 <li class="menu-item-has-children dropdown">
-                    <a href="index.html#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i class="menu-icon fa fa-shower"></i>Rain Gauge</a>
-                    <ul class="sub-menu children dropdown-menu">
-                        <li><i class="menu-icon fa fa-table"></i><a href="forms-basic.html">Table</a></li>
-                        <li><i class="menu-icon fa fa-line-chart"></i><a href="forms-advanced.html">Graphic</a></li>
-                    </ul>
-                </li>
-                <li class="menu-item-has-children dropdown">
-                    <a href="index.html#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i class="menu-icon fa fa-wrench"></i>Machine Learning</a>
+                    <a href="index.html#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i class="menu-icon fa fa-wrench"></i>Analisis</a>
                     <ul class="sub-menu children dropdown-menu">
                         <li><i class="menu-icon fa fa-thermometer-empty"></i><a href="machine_learning_suhu_kelembapan.php">Suhu dan Kelembapan</a></li>
                         <li><i class="menu-icon fa fa-leaf"></i><a href="machine_learning_kecepatan_angin.php">Kecepatan Angin</a></li>
-                        <li><i class="menu-icon fa fa-user"></i><a href="ml_suhukelembapan_2.php">Demo Pak Eko</a> </li>
+                        <li><i class="menu-icon fa fa-sun-o"></i><a href="machine_learning_intensitas_cahaya.php">Intensitas Cahaya</a> </li>
                     </ul>
                 </li>
 

@@ -112,7 +112,8 @@
                     ],
                     datasets: [{
                         label: "Temperature Graphic",
-                        borderColor: 'rgb(255, 99, 132)',
+                        // borderColor: 'rgb(255, 99, 132)',
+                        borderColor: 'rgb(255,255,255)',
                         data: [
                             <?php
                                 $sql_temp = $conn->query("SELECT id, suhu FROM skripsi_realtime.realtime_suhu_kelembapan");
@@ -120,15 +121,6 @@
                                 {
                                     $temp = $data_temp[1];
                                     echo $temp.",";
-//                                    if($data_temp[1] >= 74)
-//                                    {
-//                                        echo '';
-//                                    }
-//                                    else
-//                                    {
-//                                        $temp = $data_temp[1];
-//                                        echo $temp.",";
-//                                    }
                                 }
                             ?>
                         ],
@@ -140,11 +132,11 @@
                                     $status = $data_status[0];
                                     if($status == 'Sensor unplugged or error')
                                     {
-                                        echo "'blue', ";
+                                        echo "'red', ";
                                     }
                                     else
                                     {
-                                        echo "'red', ";
+                                        echo "'green', ";
                                     }
                                 }
                             ?>
@@ -158,6 +150,9 @@
                                 beginAtZero: true
                             }
                         }]
+                    },
+                    legend: {
+                        display: false
                     }
                 }
             });

@@ -13,4 +13,9 @@
     $getPrecipitation = $getWeather->precipitation['mode'];
     $getWindSpeed = $getWeather->wind->speed['value'];
     $getWindDirection = $getWeather->wind->direction['name'];
+
+    //Weather code for icon
+    $getWeatherCode = $getWeather->weather['number'];
+    $getWeatherValue = $getWeather->weather['value'];
+    $getWeatherIcon = $getWeather->weather['icon'];
 ?>

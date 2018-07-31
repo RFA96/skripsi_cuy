@@ -143,7 +143,7 @@
                         xAxes: [ {
                             display: true,
                             gridLines: {
-                                display: false,
+                                display: true,
                                 drawBorder: false
                             },
                             scaleLabel: {
@@ -154,18 +154,43 @@
                         yAxes: [ {
                             display: true,
                             gridLines: {
-                                display: false,
+                                display: true,
                                 drawBorder: false
                             },
                             scaleLabel: {
                                 display: true,
-                                labelString: 'Suhu Udara'
+                                labelString: 'Kecepatan Angin (km/h)'
+                            },
+                            id: 'y-axis-1',
+                            ticks: {
+                                beginAtZero: true,
+                                max: 50
                             }
                         } ]
                     },
                     title: {
                         display: false,
                         text: 'Graphic'
+                    },
+                    annotation: {
+                        drawTime: "afterDraw",
+                        annotations: [{
+                            id: 'box1',
+                            type: 'box',
+                            yScaleID: 'y-axis-1',
+                            yMin: 0,
+                            yMax: 24.4,
+                            backgroundColor: 'rgba(148, 255, 162, 0.3)',
+                            borderColor: 'rgba(100, 100, 100, 0.2)',
+                        },{
+                            id: 'box2',
+                            type: 'box',
+                            yScaleID: 'y-axis-1',
+                            yMin: 24.4,
+                            yMax: 50,
+                            backgroundColor: 'rgba(200, 100, 200, 0.2)',
+                            borderColor: 'rgba(200, 100, 200, 0.2)',
+                        }]
                     }
                 }
             } );

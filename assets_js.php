@@ -26,6 +26,8 @@
 <script src="assets/js/lib/data-table/buttons.colVis.min.js"></script>
 <script src="assets/js/lib/data-table/datatables-init.js"></script>
 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/chartjs-plugin-annotation/0.5.7/chartjs-plugin-annotation.min.js"></script>
+
 <script>
     ( function ( $ ) {
         "use strict";
