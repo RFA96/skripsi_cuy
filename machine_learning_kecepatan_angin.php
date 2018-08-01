@@ -7,7 +7,7 @@
  */
     error_reporting(0);
     include 'db_connection.php';
-    $batas_kecepatan_angin = 5;
+    $batas_kecepatan_angin = 4.6;
     $sekarang = date('Y-m-d');
     $seminggu_sebelumnya = date('Y-m-d', strtotime('-7 days', strtotime(date('Y-m-d'))));
 ?>
@@ -63,7 +63,7 @@
                                 echo "</pre>";
 
                                 echo "<hr>";
-                                echo "Kecepatan angin terbesar adalah ".$max_windspeed." km/h, pada jam ".$jamterbanyak.":00:00";
+                                echo "<b>Kecepatan angin terbesar</b> adalah <b>".$max_windspeed." km/h</b>, pada jam <b>".$jamterbanyak.":00:00</b>";
                             ?>
                         </div>
                     </div>

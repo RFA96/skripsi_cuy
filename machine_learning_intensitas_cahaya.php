@@ -64,7 +64,7 @@
                                 echo "</pre>";
 
                                 echo "<hr>";
-                                echo "Intensitas cahaya matahari terbesar adalah ".$max_lightintensity." lx, pada jam ".$jamterbanyak.":00:00";
+                                echo "<b>Intensitas cahaya matahari terbesar</b> adalah <b>".$max_lightintensity." lx</b>, pada jam <b>".$jamterbanyak.":00:00</b>";
                             ?>
                         </div>
                     </div>
