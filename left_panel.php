@@ -60,7 +60,7 @@
                     <a href="photo_docs.php"> <i class="menu-icon ti-camera"></i>Photos </a>
                 </li>
                 <li>
-                    <a> <i class="menu-icon ti-video-camera"></i>Videos </a>
+                    <a href="video_docs.php"> <i class="menu-icon ti-video-camera"></i>Videos </a>
                 </li>
                 <li>
                     <a href="log_page.php"><i class="menu-icon fa fa-book"></i> Logs</a>

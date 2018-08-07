@@ -147,7 +147,7 @@
                         xAxes: [ {
                             display: true,
                             gridLines: {
-                                display: false,
+                                display: true,
                                 drawBorder: false
                             },
                             scaleLabel: {
@@ -158,12 +158,17 @@
                         yAxes: [ {
                             display: true,
                             gridLines: {
-                                display: false,
+                                display: true,
                                 drawBorder: false
                             },
                             scaleLabel: {
                                 display: true,
                                 labelString: 'Kecepatan Angin'
+                            },
+                            id: 'y-axis-1',
+                            ticks: {
+                                beginAtZero: true,
+                                max: 20
                             }
                         } ]
                     },

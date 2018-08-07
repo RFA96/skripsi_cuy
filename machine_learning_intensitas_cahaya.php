@@ -93,7 +93,7 @@
                     type: 'line',
                     defaultFontFamily: 'Montserrat',
                     datasets: [ {
-                        label: "Wind Speed",
+                        label: "Light Intensity",
                         // data: [ 0, 30, 10, 120, 50, 63, 10 ],
                         data: [
                             <?php
@@ -148,7 +148,7 @@
                         xAxes: [ {
                             display: true,
                             gridLines: {
-                                display: false,
+                                display: true,
                                 drawBorder: false
                             },
                             scaleLabel: {
@@ -159,12 +159,17 @@
                         yAxes: [ {
                             display: true,
                             gridLines: {
-                                display: false,
+                                display: true,
                                 drawBorder: false
                             },
                             scaleLabel: {
                                 display: true,
-                                labelString: 'Kecepatan Angin'
+                                labelString: 'Intensitas Cahaya'
+                            },
+                            id: 'y-axis-1',
+                            ticks: {
+                                beginAtZero: true,
+                                max: 400
                             }
                         } ]
                     },
