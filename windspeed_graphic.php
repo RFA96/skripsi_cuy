@@ -50,6 +50,9 @@
                                 </div>
                             </div>
                         </div>
+                        <div class="col-sm-6 col-lg-12">
+                            <p>Sumber: Wirjohamidjojo, S dan Swarinoto, Y. 2007. <i>Praktek Meteorologi Pertanian</i>. Jakarta: Badan Meteorologi Klimatologi dan Geofisika</p>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -179,14 +182,14 @@
                             type: 'box',
                             yScaleID: 'y-axis-1',
                             yMin: 0,
-                            yMax: 24.4,
+                            yMax: 21,
                             backgroundColor: 'rgba(148, 255, 162, 0.3)',
                             borderColor: 'rgba(100, 100, 100, 0.2)',
                         },{
                             id: 'box2',
                             type: 'box',
                             yScaleID: 'y-axis-1',
-                            yMin: 24.4,
+                            yMin: 21,
                             yMax: 50,
                             backgroundColor: 'rgba(200, 100, 200, 0.2)',
                             borderColor: 'rgba(200, 100, 200, 0.2)',

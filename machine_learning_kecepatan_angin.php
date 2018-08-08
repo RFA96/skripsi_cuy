@@ -7,7 +7,7 @@
  */
     error_reporting(0);
     include 'db_connection.php';
-    $batas_kecepatan_angin = 4.6;
+    $batas_kecepatan_angin = 5;
     $sekarang = date('Y-m-d');
     $seminggu_sebelumnya = date('Y-m-d', strtotime('-7 days', strtotime(date('Y-m-d'))));
 ?>
@@ -45,7 +45,8 @@
                             <h3>Analisis</h3><hr>
                         </div>
                         <div class="col-sm-6 col-lg-12">
-                            <canvas id="kecepatan_angin_chart"></canvas><hr>
+                            <canvas id="kecepatan_angin_chart"></canvas>
+                            <p>Sumber: Wirjohamidjojo, S dan Swarinoto, Y. 2007. <i>Praktek Meteorologi Pertanian</i>. Jakarta: Badan Meteorologi Klimatologi dan Geofisika</p><hr>
                             <h3>Hasil Analisis</h3><br>
                             <?php
                                 $result = $conn->query("SELECT wind_speed, waktu FROM wind WHERE wind_speed > $batas_kecepatan_angin AND tanggal BETWEEN '$seminggu_sebelumnya' AND '$sekarang'");
@@ -163,18 +164,38 @@
                             },
                             scaleLabel: {
                                 display: true,
-                                labelString: 'Kecepatan Angin'
+                                labelString: 'Kecepatan Angin (Km/h)'
                             },
                             id: 'y-axis-1',
                             ticks: {
                                 beginAtZero: true,
-                                max: 20
+                                max: 50
                             }
                         } ]
                     },
                     title: {
                         display: false,
                         text: 'Graphic'
+                    },
+                    annotation: {
+                        drawTime: "afterDraw",
+                        annotations: [{
+                            id: 'box1',
+                            type: 'box',
+                            yScaleID: 'y-axis-1',
+                            yMin: 0,
+                            yMax: 21,
+                            backgroundColor: 'rgba(148, 255, 162, 0.3)',
+                            borderColor: 'rgba(100, 100, 100, 0.2)',
+                        },{
+                            id: 'box2',
+                            type: 'box',
+                            yScaleID: 'y-axis-1',
+                            yMin: 21,
+                            yMax: 50,
+                            backgroundColor: 'rgba(200, 100, 200, 0.2)',
+                            borderColor: 'rgba(200, 100, 200, 0.2)',
+                        }]
                     }
                 }
             } );

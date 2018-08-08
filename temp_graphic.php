@@ -50,6 +50,9 @@
                                 </div>
                             </div>
                         </div>
+                        <div class="col-sm-6 col-lg-12">
+                            <p>Sumber: Nursyamsi, D. 2015. <i>Karakteristik dan Kesesuaian Lahan Tanaman Cabai dan Bawang Merah</i>. Litbang Sumber Daya Lahan Pertanian, Kementerian Pertanian</p>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -167,11 +170,19 @@
                             type: 'box',
                             yScaleID: 'y-axis-1',
                             yMin: 0,
-                            yMax: 30,
-                            backgroundColor: 'rgba(148, 255, 162, 0.3)',
+                            yMax: 18,
+                            backgroundColor: 'rgba(200, 100, 200, 0.2)',
                             borderColor: 'rgba(100, 100, 100, 0.2)',
                         },{
                             id: 'box2',
+                            type: 'box',
+                            yScaleID: 'y-axis-1',
+                            yMin: 18,
+                            yMax: 30,
+                            backgroundColor: 'rgba(148, 255, 162, 0.3)',
+                            borderColor: 'rgba(200, 100, 200, 0.2)',
+                        },{
+                            id: 'box3',
                             type: 'box',
                             yScaleID: 'y-axis-1',
                             yMin: 30,

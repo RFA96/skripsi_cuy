@@ -46,7 +46,8 @@
                             <h3>Analisis</h3><hr>
                         </div>
                         <div class="col-sm-6 col-lg-12">
-                            <canvas id="intensitas_cahaya_chart"></canvas><hr>
+                            <canvas id="intensitas_cahaya_chart"></canvas>
+                            <p>Gardner, et.al. 1992. <i>Fisiologi Tanaman Budidaya Tropik</i>. Yogyakarta: Gadjah Mada University Press</p><hr>
                             <h3>Hasil Analisis</h3><br>
                             <?php
                                 $result = $conn->query("SELECT luminance, tanggal, jam FROM skripsi_cuy.light_intensity WHERE luminance > $batas_intensitas_cahaya AND tanggal BETWEEN '$seminggu_sebelumnya' AND '$sekarang'");
@@ -176,6 +177,34 @@
                     title: {
                         display: false,
                         text: 'Graphic'
+                    },
+                    annotation: {
+                        drawTime: "afterDraw",
+                        annotations: [{
+                            id: 'box1',
+                            type: 'box',
+                            yScaleID: 'y-axis-1',
+                            yMin: 0,
+                            yMax: 390,
+                            backgroundColor: 'rgba(200, 100, 200, 0.2)',
+                            borderColor: 'rgba(100, 100, 100, 0.2)',
+                        },{
+                            id: 'box2',
+                            type: 'box',
+                            yScaleID: 'y-axis-1',
+                            yMin: 390,
+                            yMax: 760,
+                            backgroundColor: 'rgba(148, 255, 162, 0.3)',
+                            borderColor: 'rgba(200, 100, 200, 0.2)',
+                        },{
+                            id: 'box3',
+                            type: 'box',
+                            yScaleID: 'y-axis-1',
+                            yMin: 760,
+                            yMax: 1000,
+                            backgroundColor: 'rgba(200, 100, 200, 0.2)',
+                            borderColor: 'rgba(100, 100, 100, 0.2)',
+                        }]
                     }
                 }
             } );

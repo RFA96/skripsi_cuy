@@ -45,6 +45,9 @@
                         <li><i class="menu-icon fa fa-line-chart"></i><a href="windspeed_graphic.php">Graphic</a></li>
                     </ul>
                 </li>
+                <li>
+                    <a href="timer_graphic.php" class="dropdown-toggle" aria-haspopup="true" aria-expanded="false"> <i class="menu-icon fa fa-clock-o"></i>Timer</a>
+                </li>
                 <li class="menu-item-has-children dropdown">
                     <a href="index.html#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i class="menu-icon fa fa-wrench"></i>Analisis</a>
                     <ul class="sub-menu children dropdown-menu">

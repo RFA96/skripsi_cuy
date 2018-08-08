@@ -50,6 +50,9 @@
                                 </div>
                             </div>
                         </div>
+                        <div class="col-sm-6 col-lg-12">
+                            <p>Gardner, et.al. 1992. <i>Fisiologi Tanaman Budidaya Tropik</i>. Yogyakarta: Gadjah Mada University Press</p>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -64,11 +67,13 @@
                     // labels: [ "2010", "2011", "2012", "2013", "2014", "2015", "2016" ],
                     labels : [
                         <?php
-                            $sql = "SELECT * FROM skripsi_realtime.intensitas_cahaya LIMIT 10";
+                            $sql = "SELECT * FROM skripsi_cuy.light_intensity WHERE tanggal = '".date('Y-m-d')."'";
                             $result = $conn->query($sql);
                             while($row = $result->fetch_array())
                             {
-                                echo "'2018-07-30', ";
+                                $tanggal = $row[2];
+                                $waktu = $row[3];
+                                echo "'$tanggal | $waktu',";
                             }
                         ?>
                     ],
@@ -79,10 +84,10 @@
                         // data: [ 0, 30, 10, 120, 50, 63, 10 ],
                         data: [
                             <?php
-                            $query = mysqli_query($conn, "SELECT * FROM skripsi_realtime.intensitas_cahaya LIMIT 10");
+                            $query = mysqli_query($conn, "SELECT * FROM skripsi_cuy.light_intensity WHERE tanggal = '".date('Y-m-d')."'");
                             while($row = mysqli_fetch_array($query, MYSQLI_BOTH))
                             {
-                                $value = $row[1]*100;
+                                $value = $row[1];
                                 echo $value.", ";
                             }
                             ?>
@@ -157,17 +162,25 @@
                             type: 'box',
                             yScaleID: 'y-axis-1',
                             yMin: 0,
-                            yMax: 550,
-                            backgroundColor: 'rgba(148, 255, 162, 0.3)',
+                            yMax: 390,
+                            backgroundColor: 'rgba(200, 100, 200, 0.2)',
                             borderColor: 'rgba(100, 100, 100, 0.2)',
                         },{
                             id: 'box2',
                             type: 'box',
                             yScaleID: 'y-axis-1',
-                            yMin: 550,
+                            yMin: 390,
+                            yMax: 760,
+                            backgroundColor: 'rgba(148, 255, 162, 0.3)',
+                            borderColor: 'rgba(200, 100, 200, 0.2)',
+                        },{
+                            id: 'box3',
+                            type: 'box',
+                            yScaleID: 'y-axis-1',
+                            yMin: 760,
                             yMax: 1000,
                             backgroundColor: 'rgba(200, 100, 200, 0.2)',
-                            borderColor: 'rgba(200, 100, 200, 0.2)',
+                            borderColor: 'rgba(100, 100, 100, 0.2)',
                         }]
                     }
                 }

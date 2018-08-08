@@ -46,7 +46,8 @@
                             <h3>Analisis</h3><hr>
                         </div>
                         <div class="col-sm-6 col-lg-12">
-                            <canvas id="temperature-chart"></canvas><hr>
+                            <canvas id="temperature-chart"></canvas>
+                            <p>Sumber: Nursyamsi, D. 2015. <i>Karakteristik dan Kesesuaian Lahan Tanaman Cabai dan Bawang Merah</i>. Litbang Sumber Daya Lahan Pertanian, Kementerian Pertanian</p><hr>
                             <?php
                                 $result = $conn->query("SELECT temperature, humidity, tanggal, waktu FROM suhu_kelembapan WHERE temperature > $batas_suhu AND tanggal BETWEEN '$seminggu_sebelumnya' AND '$sekarang'");
                                 while($row = $result->fetch_array())
@@ -234,13 +235,41 @@
                             id: 'y-axis-1',
                             ticks: {
                                 beginAtZero: true,
-                                max: 100
+                                max: 50
                             }
                         } ]
                     },
                     title: {
                         display: false,
                         text: 'Graphic'
+                    },
+                    annotation: {
+                        drawTime: "afterDraw",
+                        annotations: [{
+                            id: 'box1',
+                            type: 'box',
+                            yScaleID: 'y-axis-1',
+                            yMin: 0,
+                            yMax: 18,
+                            backgroundColor: 'rgba(200, 100, 200, 0.2)',
+                            borderColor: 'rgba(100, 100, 100, 0.2)',
+                        },{
+                            id: 'box2',
+                            type: 'box',
+                            yScaleID: 'y-axis-1',
+                            yMin: 18,
+                            yMax: 30,
+                            backgroundColor: 'rgba(148, 255, 162, 0.3)',
+                            borderColor: 'rgba(200, 100, 200, 0.2)',
+                        },{
+                            id: 'box3',
+                            type: 'box',
+                            yScaleID: 'y-axis-1',
+                            yMin: 30,
+                            yMax: 50,
+                            backgroundColor: 'rgba(200, 100, 200, 0.2)',
+                            borderColor: 'rgba(200, 100, 200, 0.2)',
+                        }]
                     }
                 }
             } );
